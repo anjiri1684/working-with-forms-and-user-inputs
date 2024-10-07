@@ -3,6 +3,9 @@ export default function Signup() {
     event.preventDefault();
 
     const fd = new FormData(event.target);
+    // const email = fd.get("email");
+    // const password = fd.get("password");
+    // console.log(email, password);
     const acquisitionChannel = fd.getAll("acquisition");
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
